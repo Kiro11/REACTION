@@ -103,7 +103,6 @@ font-family: 'Anton', Arial, sans-serif;
 font-size: 40px;
 margin-bottom: 25px;
   }
-
   .timer-plate {
   display: inline-block;
 background: #000000;
@@ -121,5 +120,41 @@ color: #ffffff;
   font-size: 16px;
   color: #cccccc;
   margin-left: 6px;
+}
+.react-sub {
+margin-top: 20px;
+font-size: 13px;
+}
+
+.result-tag {
+display: inline-block;
+font-size: 13px;
+font-weight: bold;
+color: #777777;
+background: #3366cc;
+padding: 5px 12px;
+border-radius: 3px;
+margin-bottom: 14px;
+}
+.result-value {
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  font-size: 60px;
+}
+ 
+.result-value .unit {
+  font-size: 18px;
+  color: #888888;
+  margin-left: 6px;
+}
+ verdict {
+  font-size: 14px;
+  color: #666666;
+  margin: 12px 0 20px;
+}
+ 
+@media (max-width: 420px) {
+  .count-digit { font-size: 90px; }
+  .wordmark { font-size: 38px; }
 }
  
