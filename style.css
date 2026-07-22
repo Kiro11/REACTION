@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+padding: 40px 20px;
+background: #ffffff;
+color: #222222;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+ body[data-state="reacting"] {
+background-color: #e63329;
+color: #ffffff;
+ }
+.tag {
+position: fixed;
+top: 10px;
+left: 10px;
+font-size: 12px;
+color: #888888;
+}
+
+body[data-state="reacting"] .tag,
+body[data-state="countdown"] .tag {
+    display: none;
+}
+ 
+
+.app {
+max-width: 400px;
+margin: 0 auto;
+}

@@ -4,65 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>REACT — reflex tester</title>
-<meta name="description" content="A tiny, no-nonsense reflex tester . Count down, watch
-the clock, stop it as fast as you can."
+<meta name="description" content="A tiny, no-nonsense reflex tester. Count down, watch the clock, stop it as fast as you can.">
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="style.css">
     </head>
+<body data-state="start">
+<span class="tag">CAUTION: REACT FAST</span>
+<div class="app">
+
+  
+<section class="view" data-view="start">
+    <p class="eyebrow">A tiny reflex test</p>
+    <h1 class="wordmark">REACT<span class="dot">.</span></h1>
+    <p class="lede">Count down, watch the clock turn red, then stop it as fast as your hands allow. No tricks, just you against the clock.</p>
+    <button class="btn" id="startBtn" type="button">Start</button>
+    <p class="hint-line">or press any key to start</p>
+    <p class="record">BEST: <b id="bestVal">no record yet</b></p>
+  </section>
+  
+    <section class="view" data-view="countdown" hidden>
+   <p class="countdown-label">GET READY</p>
+<div class="count-digit" id="countDigit">3</div>
+    </section>
+     
+    <section class="view" data-view="reacting" hidden>
+          <p class="react-label">GO!</p>
+         <div class="timer-plate">
+  <span class="timer-readout"><span id="liveTimer">0000</span><span class="unit">ms</span></span>
+</div>
+
+    <p class="react-sub"> tap or press anything to stop</p>
+</section>
+ 
 
 
+    <section class="view" data-view="result" hidden>
+      <p class="result-tag" id="resultTag" hidden>New Record</p>
+    <div class="result-value"><span id="resultVal">0</span><span class="unit">ms</span></div>
+    <p class="verdict" id="verdictText"></p>
+    <button class="btn small" id="retryBtn" type="button">Try again</button>
+    <p class="record">BEST: <b id="bestValResult">no record yet</b></p>
+  </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+<script src="script.js"></script>
+</body>
   </html>
+  
