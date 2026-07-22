@@ -89,7 +89,54 @@ function updateBestDisplay() {
       countdownTimer = setTimeout(startReacting, COUNT_STEP_MS);
     }
   }
+function startReacting() {
+    setState('reacting');
+    startTime = performance.now();
+    liveTimerEl.textContent = '0000';
+    tickTimer();
+  }
  
+  function tickTimer() {
+    var elapsed = performance.now() - startTime;
+    liveTimerEl.textContent = formatMs(elapsed);
+    rafId = requestAnimationFrame(tickTimer);
+  }
+ 
+  function stopReacting() {
+    if (state !== 'reacting') return;
+    cancelAnimationFrame(rafId);
+    var elapsed = performance.now() - startTime;
+    showResult(elapsed);
+  }
+ 
+  function showResult(ms) {
+    setState('result');
+    var rounded = Math.round(ms);
+    resultValEl.textContent = String(rounded);
+    verdictTextEl.textContent = verdictFor(rounded);
+ 
+    var isRecord = bestMs === null || rounded < bestMs;
+    if (isRecord) {
+      bestMs = rounded;
+      saveBest(rounded);
+      resultTagEl.hidden = false;
+      popAnimate(resultTagEl);
+    } else {
+      resultTagEl.hidden = true;
+    }
+    updateBestDisplay();
+  }
+ 
+  startBtn.addEventListener('click', beginRun);
+  retryBtn.addEventListener('click', beginRun);
+ 
+  document.addEventListener('pointerdown', function (e) {
+    if (e.target.closest && e.target.closest('button')) return;
+    if (state === 'reacting') stopReacting();
+  });
+   
+  
+  
 
 
 
