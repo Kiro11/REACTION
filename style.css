@@ -24,8 +24,27 @@ body[data-state="countdown"] .tag {
     display: none;
 }
  
-
 .app {
 max-width: 400px;
 margin: 0 auto;
+}
+.view[hidden] {
+display: none;
+}
+
+.eyebrow {
+font-size: 13px;
+color: #777777;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.wordmark {
+font-family: 'Anton', Arial, sans-serif;
+font-size: 48px;
+margin: 0 0 15px;
+}
+ 
+.wordmark .dot {
+    color: #e63329;
 }
