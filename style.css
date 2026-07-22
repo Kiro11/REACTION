@@ -48,3 +48,31 @@ margin: 0 0 15px;
 .wordmark .dot {
     color: #e63329;
 }
+.lade {
+ font-size: 15px;
+line-height: 1.5;
+color: #555555;
+margin-bottom: 25px;
+}
+
+  .btn {
+font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+color: #ffffff;
+background: #3366cc;
+border: none;
+padding: 12px 28px;
+cursor: pointer;
+border-radius: 3px;
+  }
+
+  .btn:hover {
+    background: #254e;
+  }
+
+  .btn.small {
+font-size: 14px;
+padding: 8px 18px;
+  }
+  
