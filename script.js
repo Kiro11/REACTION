@@ -134,6 +134,19 @@ function startReacting() {
     if (e.target.closest && e.target.closest('button')) return;
     if (state === 'reacting') stopReacting();
   });
+document.addEventListener('keydown', function (e) {
+    if (IGNORED_KEYS.indexOf(e.key) !== -1) return;
+    if (e.target.closest && e.target.closest('button')) return;
+    if (state === 'reacting') { e.preventDefault(); stopReacting(); }
+    else if (state === 'start' || state === 'result') { e.preventDefault(); beginRun(); }
+  });
+
+
+
+   updateBestDisplay();
+  setState('start');
+})();
+
    
   
   
